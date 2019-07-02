@@ -6,24 +6,9 @@ import traitlets
 
 robot = Robot()
 
-def stop():
-    robot.stop()
-    
-def forward():
-    robot.forward(0.4)
-
-def backward():
-    robot.backward(0.4)
-
-def left():
-    robot.left(0.3)
-
-def right():
-    robot.right(0.3)
-
 try: 
 	while True:
-		forward()
+		robot.forward(0.5)
 				
 ## Ctrl + c to stop robot
 except KeyboardInterrupt:
