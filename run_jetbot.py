@@ -1,15 +1,29 @@
 from jetbot import Robot
-import time
-import ipywidgets.widgets as widgets
-from IPython.display import display
-import traitlets
 
 robot = Robot()
 
 try: 
 	while True:
-		robot.forward(0.5)
+		mode = input("Enter mode: f forward, b backward, l left, r right, s stop ")
+		
+		if mode ==  'f':	
+			robot.forward(0.5)
+			
+		if mode ==  'b':	
+			robot.backward(0.5)
+			#print("Jetbot is moving backward!")			
+
+		if mode ==  'l':	
+			robot.left(0.5)
+			#print("Jetbot is turning left!")			
+
+		if mode ==  'r':	
+			robot.right(0.5)
+			#print("Jetbot is turning right!")			
 				
+		if mode ==  's':	
+			robot.stop()
+
 ## Ctrl + c to stop robot
 except KeyboardInterrupt:
         # Close serial connection
