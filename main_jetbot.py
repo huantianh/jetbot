@@ -8,18 +8,19 @@ try:
 		
 		if mode ==  'f':	
 			robot.forward(0.5)
+			print("Jetbot is moving foward!")	
 			
 		if mode ==  'b':	
 			robot.backward(0.5)
-			#print("Jetbot is moving backward!")			
+			print("Jetbot is moving backward!")			
 
 		if mode ==  'l':	
 			robot.left(0.5)
-			#print("Jetbot is turning left!")			
+			print("Jetbot is turning left!")			
 
 		if mode ==  'r':	
 			robot.right(0.5)
-			#print("Jetbot is turning right!")			
+			print("Jetbot is turning right!")			
 				
 		if mode ==  's':	
 			robot.stop()
@@ -29,5 +30,3 @@ except KeyboardInterrupt:
         # Close serial connection
 	robot.stop()     
 	print('\n		Stop!!! See you again!')
-
-
